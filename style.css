@@ -1,0 +1,269 @@
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-color: #C7B7A3;
+    background-image: url('imgs/brasa1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* abaixo de 800px a imagem some */
+@media (max-width: 800px){
+    img{
+        display: none;
+    }
+}
+
+#container{
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-areas: 
+    "cabecalho"
+    "corpo";
+    padding: 1em;
+    margin: 0 auto;
+    width: 70%;
+
+    background-color: #741b27;
+    border-radius: 1em;
+    box-shadow: 0px 0px 25px 10px #00000070;
+}
+
+#cabecalho{
+    grid-area: cabecalho;
+    padding: 0.5em;
+
+    text-align: center;
+
+    color: #f8f4ef;
+}
+
+#titulo{
+    font-family: Verdana, sans-serif;
+    font-size: 2.5em;
+
+    text-shadow: 0px 4px 3px #47060670;
+}
+
+#subtitulo{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+#corpo{
+    grid-area: corpo;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1.3fr;
+    grid-template-areas: 
+    "imagem conteudo";
+    overflow: auto;
+    align-items: center;
+    padding: 2em;
+
+    background-color: #E8D8C4;
+    border-radius: 1em;
+}
+
+#imagem{
+    grid-area: imagem;
+}
+
+#quantidades{
+    z-index: 0;
+
+    grid-area: conteudo;
+
+    font-size: 1.8em;
+    text-align: center;
+
+    color: #2e060b;
+
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.grupo{
+    padding: 0.3em;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.sub, .add{
+    width: 1em;
+    margin: 0 0.5em;
+
+    font-size: 1em;
+
+    color: #f8f4ef;
+    background: #561C24;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px 1px #00000040;
+
+    cursor: pointer;
+}
+
+.sub:hover, .add:hover{
+    background: #944d57;
+    box-shadow: none;
+}
+
+input[type="number"]{
+    width: 5em;
+
+    font-size: 1.2em;
+    text-align: center;
+
+    color: #561C24;
+    background-color: #f8f4ef;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px 1px #00000040;
+}
+
+#erro{
+    grid-area: conteudo;
+    padding: 0.2em;
+    margin: auto;
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    width: 80%;
+
+    font-size: 0.7em;
+    font-weight: 600;
+
+    color:#561C24;
+    background-color: #ca9fa5;
+    border-radius: 0.3em;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#calcular{
+    display: block;
+    grid-area: conteudo;
+
+    text-align: center;
+
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#botao{
+    width: 6em;
+    padding: 0.5em;
+    margin-bottom: 2em;
+
+    font-size: 1em;
+
+    color: #f8f4ef;
+    background: #561C24;
+    text-shadow: 1px 1px 1px #00000050;
+    border-radius: 7px;
+    box-shadow: 0px 2px 1px 1px rgba(0,0,0,0.5);
+
+    cursor: pointer;
+}
+
+#botao:hover{
+    color: #561C24;
+    background: #f8f4ef;
+    text-shadow: none;
+    box-shadow: inset 1px 1px 1px  rgba(0,0,0,0.3);
+}
+
+#resultado{
+    z-index: -1;
+
+    grid-area: conteudo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2em;
+
+    text-align: center;
+    font-size: 1.5em;
+
+    color: #000000;
+    background: #f8f4ef;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 1px #561C2460;
+
+    transition: opacity 0.3s ease;
+    opacity: 0;
+
+}
+
+ul{
+    margin-left: 2em;
+
+    list-style-image: url('imgs/bullet.png');
+    list-style-type: disc;
+}
+
+ul li{
+    padding: 0.2em;
+    padding-left: 1px;
+
+    text-align: left;
+}
+
+#tituloResult{
+    margin-top: 0.4em;
+
+    font-size:1.1em;
+    font-weight: 600;
+
+    color: #561C24;
+}
+
+#corpoResult{
+    font-size: 1em;
+    font-weight: 500;
+
+    color: #2e060b;
+}
+
+#fechar{
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+    width: 4em;
+    float: center;
+
+    font-size: 1em;
+
+    color: #f8f4ef;
+    background: #561C24;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+#fechar:hover{
+    color: #561C24;
+    background: #C7B7A3;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Churrasco</title>
+    <link rel="icon" type="image/png" href="imgs/icon.png">
+    <link rel="stylesheet" type="text/css" href="style.css"">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+
+        <div id="container">
+
+
+            <div id="cabecalho">
+                <h1 id="titulo">Calculadora de churrasco</h1>
+                <p id="subtitulo">Insira abaixo a quantidade de pessoas que participará do churrasco:</p>            
+            </div>
+
+
+            <div id="corpo">
+
+                <div id="imagem">
+                        <img id="churras" src="imgs/churras.png" alt=""/>
+                </div>
+
+                <div id="quantidades">
+                    <div class="grupo">
+                        <label for="homem">Homens:</label><br>
+                        <div class="input-group">
+                            <button class="sub" data-target="homem">-</button>
+                            <input type="number" id="homem" min="0" value="0">
+                            <button class="add" data-target="homem">+</button>
+                        </div>
+                    </div>
+
+                    <div class="grupo">
+                        <label for="mulher">Mulheres:</label><br>
+                        <div class="input-group">
+                            <button class="sub" data-target="mulher">-</button>
+                            <input type="number" id="mulher" min="0" value="0">
+                            <button class="add" data-target="mulher">+</button>
+                        </div>
+                    </div>
+
+                    <div class="grupo">
+                        <label for="crianca">Crianças:</label><br>
+                        <div class="input-group">
+                            <button class="sub" data-target="crianca">-</button>
+                            <input type="number" id="crianca" min="0" value="0">
+                            <button class="add" data-target="crianca">+</button>
+                        </div>
+                    </div>
+                    
+                    <p id="erro">Insira pelo menos um valor diferente de zero.</p>
+
+                    <div id="calcular">
+                        <button id="botao">Calcular</button>
+                    </div>
+                    
+                </div>
+
+                <div id="resultado">
+                    <div id="tituloResult"></div>
+                    <div id="corpoResult"></div>
+                    <button id="fechar">Fechar</button>
+                </div>
+
+            </div>
+
+        </div>
+
+</body>
+</html>
