@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
     const erro = document.getElementById('erro');
     const resultado = document.getElementById('resultado');
     const calcular = document.getElementById('calcular');
